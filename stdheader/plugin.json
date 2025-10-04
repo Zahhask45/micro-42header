@@ -1,0 +1,7 @@
+{
+  "Name": "stdheader",
+  "Description": "42-style header generator for Micro",
+  "Version": "1.0.0",
+  "Author": "jodos-sa",
+  "Tags": ["stdheader", "42", "comment"]
+}
