@@ -7,13 +7,6 @@ local buffer = import("micro/buffer")
 
 local config = {
     asciiart = {
-    -- "                         ",
-    -- "            _            ",
-    -- "          _ \\'-_,#       ",
-    -- "         _\\'--','`|      ",
-    -- "         \\`---`  /       ",
-    -- "          `----'`        ",
-    -- "                         "
     "                     ",
     "          _          ",
     "        _ \\'-_,#     ",
@@ -182,7 +175,10 @@ function onRune(bp, r)
     update(bp)
 end
 
-function onSave(bp) onRune(bp); end
+function preSave(bp)
+    onRune(bp)
+    bp:Save()
+end
 
 -- Main entry
 function stdheader(bp)
